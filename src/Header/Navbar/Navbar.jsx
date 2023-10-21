@@ -23,6 +23,7 @@ const Navbar = () => {
       <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
        <li><NavLink to='/'>Home</NavLink></li>
        <li><NavLink to='/addproduct'>Add product</NavLink></li>
+       <li><NavLink to='sign-in'>Sign in</NavLink></li>
        <li><NavLink to='/mycart'>My cart <i className="fa-solid fa-cart-shopping text-purple-600"></i></NavLink></li>
        
       </ul>
@@ -34,11 +35,12 @@ const Navbar = () => {
     <ul className="menu menu-horizontal px-1">
     <li><NavLink to='/'>Home</NavLink></li>
        <li><NavLink to='/addproduct'>Add product</NavLink></li>
+       <li><NavLink to='sign-in'>Sign in</NavLink></li>
        <li><NavLink to='/mycart'>My cart  <i className="fa-solid fa-cart-shopping text-purple-600"></i></NavLink></li>
     </ul>
   </div>
   <div className="navbar-end gap-2">
-    <a className="btn">Sign In</a>
+   
   
   <button onClick={changeTheme} title={`${isLight?'Dark':'Light'}`} className={`p-[3px] rounded ${isLight? 'bg-blue-200 ': 'bg-black'}`}>
         {
