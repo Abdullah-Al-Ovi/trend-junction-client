@@ -4,6 +4,7 @@ import Home from "../Pages/Home/Home";
 import BrandProducts from "../Pages/brandProducts/brandProducts";
 import SignIn from "../Pages/SignIn/SignIn";
 import SignUp from "../Pages/SignUp/SignUp";
+import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 
 
 
@@ -11,6 +12,7 @@ const Router = createBrowserRouter([
     {
         path:'/',
         element:<Root></Root>,
+        errorElement:<ErrorPage></ErrorPage>,
 
         children:[
             {
