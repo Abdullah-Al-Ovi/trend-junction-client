@@ -32,7 +32,7 @@ const Footer = () => {
             </a>
             <div className="mt-6 lg:max-w-sm">
               <p className="text-sm text-gray-800">
-              At Trend Fusion, we&rsquo;re dedicated to bringing you the latest in fashion and style. Our collection features an array of iconic brands, including Adidas, Nike, Levi&rsquo;s, H&M, Gucci, and Puma, carefully curated to cater to your unique tastes.
+              At Trend Junction, we&rsquo;re dedicated to bringing you the latest in fashion and style. Our collection features an array of iconic brands, including Adidas, Nike, Levi&rsquo;s, H&M, Gucci, and Puma, carefully curated to cater to your unique tastes.
               </p>
               <p className="mt-4 text-sm text-gray-900">
               Stay connected with us through our social media channels to keep up with the latest trends, promotions, and fashion tips. Our commitment to quality and customer satisfaction is unwavering.
@@ -63,7 +63,7 @@ const Footer = () => {
                 title="Our email"
                 className="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800"
               >
-                trend_fusion@gmail.mail
+                trend_junction@gmail.mail
               </a>
             </div>
             <div className="flex">

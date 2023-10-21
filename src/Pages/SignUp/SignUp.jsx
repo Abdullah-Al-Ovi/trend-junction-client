@@ -18,7 +18,8 @@ const SignUp = () => {
         const password = e.target.password.value
         const name= e.target.name.value
         const link= e.target.link.value
-        console.log(link);
+        const userInfo={email,name,link}
+       
         setErr('')
 
         if(!/^(?=.*[A-Z])(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/.test(password)){
@@ -35,8 +36,14 @@ const SignUp = () => {
            
            updateUser(name,link)
             .then(()=>{
-                
-            })
+                fetch('http://localhost:5000/users',{
+                    method:'POST',
+                    headers:{
+                        'content-type':'application/json'
+                    },
+                    body: JSON.stringify(userInfo)
+                })
+            }).then(res=>res.json()).then(data=>console.log(data))
             .catch(()=>{
                 
             })

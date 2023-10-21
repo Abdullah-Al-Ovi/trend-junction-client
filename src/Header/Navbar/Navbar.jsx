@@ -37,7 +37,7 @@ const Navbar = () => {
       </ul>
     </div>
     <img className="w-[50px] h-[50px] rounded-full" src={logo} />
-    <a className="btn btn-ghost normal-case text-xl">Trend Junction</a>
+    <a className="btn btn-ghost normal-case md:text-xl">Trend Junction</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
@@ -56,8 +56,8 @@ const Navbar = () => {
 
        
        
-       <span className="mx-2  bg-gradient-to-r from-violet-500 to-fuchsia-500 rounded py-1 px-[2px] font-medium text-white">{user.displayName ? user.displayName : disName}</span>
-        <Link to='/'><button onClick={handleSignOut} className="btn bg-red-500 text-white font-semibold">Sign out</button> </Link>
+       <span className="mx-2  bg-gradient-to-r from-violet-500 to-fuchsia-500 rounded py-1 px-[2px] md:font-medium text-white">{user.displayName ? user.displayName : disName}</span>
+        <Link to='/'><button onClick={handleSignOut} className="rounded p-[2px] md:p-1  bg-red-500 text-white md:font-semibold">Sign out</button> </Link>
         
     </div>
     
