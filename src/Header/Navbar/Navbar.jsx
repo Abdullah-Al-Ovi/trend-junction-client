@@ -1,17 +1,25 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import logo from '../../assets/download.jfif'
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { authContex } from "../../Components/AuthProvider/AuthProvider";
 
 
 const Navbar = () => {
 
   const [isLight,setIsLight]=useState(true)
-  const changeTheme=()=>{
-    setIsLight(!isLight)
-   
-      document.body.classList.toggle("dark-mode")
+  const navigate = useNavigate()
+    const {logOut,user,disName,photoLink}= useContext(authContex)
     
+  const changeTheme=()=>{
+    setIsLight(!isLight) 
   }
+
+  const handleSignOut=()=>{
+    logOut()
+    .then(()=>{
+        navigate('/')
+    })
+}
 
     return (
         <div className="navbar bg-base-100 shadow-lg ">
@@ -40,6 +48,21 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end gap-2">
+
+  {
+    user &&  <div className="flex md:inline-block flex-col gap-2 justify-center items-center">
+       
+         <img className="w-[50px]  rounded-full object-cover inline-block" src={user.photoURL ? user.photoURL : photoLink} /> 
+
+       
+       
+       <span className="mx-2  bg-gradient-to-r from-violet-500 to-fuchsia-500 rounded py-1 px-[2px] font-medium text-white">{user.displayName ? user.displayName : disName}</span>
+        <Link to='/'><button onClick={handleSignOut} className="btn bg-red-500 text-white font-semibold">Sign out</button> </Link>
+        
+    </div>
+    
+
+   }
    
   
   <button onClick={changeTheme} title={`${isLight?'Dark':'Light'}`} className={`p-[3px] rounded ${isLight? 'bg-blue-200 ': 'bg-black'}`}>
