@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "question": "What brands of products do you sell in your shop?",
+        "answer": "We offer a wide range of products from popular brands such as Adidas, Nike, Levi's, H&M, Gucci, and Puma."
+    },
+    {
+        "id": 2,
+        "question": "Do you offer products from other brands as well?",
+        "answer": "Currently, we primarily feature products from Adidas, Nike, Levi's, H&M, Gucci, and Puma. We may consider adding more brands in the future."
+    },
+    {
+        "id": 3,
+        "question": "Is there a loyalty program or rewards system for customers?",
+        "answer": "Yes, we have a loyalty program that offers rewards and special discounts to our regular customers. You can inquire in-store for more details."
+    },
+    {
+        "id": 4,
+        "question": "What payment methods do you accept?",
+        "answer": "We accept a variety of payment methods, including credit cards, debit cards, cash, and mobile payment options. Please check with our store for specific payment options."
+    },
+    {
+        "id": 5,
+        "question": "Do you offer gift cards or gift certificates?",
+        "answer": "Yes, we offer gift cards and gift certificates that make great presents for friends and family. You can purchase them at our store."
+    },
+    {
+        "id":6,
+        "question":" What is your return and exchange policy?",
+        "answer":"We have a hassle-free return and exchange policy. If you're not satisfied with your purchase, you can return or exchange it within 30 days. Please review our Returns and Exchanges page for more details."
+    },
+    {
+        "id":7,
+        "question":"How do I stay updated on your store's latest arrivals?",
+        "answer":" To stay informed about our latest arrivals and collections, follow us on social media and regularly visit our New Arrivals section on our website."
+    }
+]
