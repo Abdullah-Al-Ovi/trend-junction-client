@@ -1,8 +1,13 @@
-# React + Vite
+# Live Link: https://trend-junction-shop.surge.sh/
+### Features: 
+  * User can shop individually from their desired brand just by clicking on the brand.
+  * User can add new product to website. 
+  * User can update information about product. 
+  * User can add their chosen product to cart.
+  * User can see his/her added product from **MyCart** route. 
+  * User can remove product from his/her cart.
+  * No invalid/non-registered stranger can add new product to website. 
+  * No invalid/non-registered stranger can add product to cart. 
+  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
