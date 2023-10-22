@@ -1,9 +1,11 @@
 import { Rating } from '@smastrom/react-rating'
 
 import '@smastrom/react-rating/style.css'
+import { Link } from 'react-router-dom';
 
 const BrandProduct = ({data}) => {
-    const {name,image,brandname,type,price,rating} = data
+    const {_id,name,image,brandname,type,price,rating} = data
+    console.log(_id);
     return (
        
         <div className="card flex flex-col card-side bg-base-100 shadow-xl">
@@ -22,11 +24,12 @@ const BrandProduct = ({data}) => {
             </div>
              </div>
              <div className=' w-[100%] text-center '>
-             <button className='w-[60%] text-white  font-medium bg-red-300 rounded mt-3'>Update</button>
+             <Link to={`/update/${_id}`}><button className='w-[60%] text-white  font-medium bg-red-300 rounded mt-3'>Update</button></Link>
+
              </div>
              
              <div className=' w-[100%] text-center'>
-             <button className='w-[60%] text-white  font-medium bg-red-300 rounded my-3 '>Details</button>
+             <Link to={`/product/${_id}`} ><button className='w-[60%] text-white  font-medium bg-red-300 rounded my-3 '>Details</button></Link>
              </div>
              
 </div>
