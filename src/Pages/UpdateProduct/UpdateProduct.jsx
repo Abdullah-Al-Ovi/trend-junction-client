@@ -35,7 +35,7 @@ const UpdateProduct = () => {
     return (
         <div>
         <div className="text-center mt-3">
-            <h1 className="text-lg font-medium md:text-2xl md:font-semibold ">Update product : {loadedData._id}</h1>
+            <h1 className="text-lg font-medium md:text-2xl md:font-semibold ">Update product</h1>
         </div>
         <div className="w-[95%] md:w-[80%] mx-auto my-7">
 
