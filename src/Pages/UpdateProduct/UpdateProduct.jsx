@@ -18,7 +18,7 @@ const UpdateProduct = () => {
         e.preventDefault()
         const updatedProduct = {name:finalName,brandname:finalBrandname,type:finalType,image:finalimage,price:finalPrice,rating:finalRating}
         console.log(updatedProduct);
-        fetch(`http://localhost:5000/products/id/${loadedData._id}`,{
+        fetch(`https://brand-reseller-server.vercel.app/products/id/${loadedData._id}`,{
             method:'PUT',
             headers:{
                 'content-type':'application/json'

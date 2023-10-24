@@ -11,7 +11,7 @@ const MyCart = () => {
     const [cartProducts,setCartProducts]=useState([])
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/cart/${user.email}`)
+        fetch(`https://brand-reseller-server.vercel.app/cart/${user.email}`)
         .then(res=>res.json())
         .then(data=>setCartProducts(data))
     },[user.email])
@@ -31,6 +31,9 @@ const MyCart = () => {
                   ></CartProduct>)  
                 }
             </div>
+            {
+                cartProducts.length === 0 && <div className=" h-[50vh] flex justify-center items-center text-center  mx-auto "><h1 className="mx-auto text-xl text-red-500 font-semibold ">You have not added any product to cart yet.</h1></div>
+            }
         </div>
     );
 };

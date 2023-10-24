@@ -12,7 +12,7 @@ const AddProduct = () => {
         const rating = parseFloat(e.target.rating.value)
         const short_description = e.target.description.value
         const product ={name,brandname,type,image,price,rating,short_description}
-        fetch('http://localhost:5000/products',{
+        fetch('https://brand-reseller-server.vercel.app/products',{
             method:'POST',
             headers:{
                 'content-type':'application/json'

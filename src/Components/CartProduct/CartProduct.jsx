@@ -5,7 +5,7 @@ const CartProduct = ({product,setCartProducts,cartProducts}) => {
     const {image,name,price,brandname}= product
     const handleRemoveFromCart=()=>{
             
-            fetch(`http://localhost:5000/cart/id/${product._id}`,{
+            fetch(`https://brand-reseller-server.vercel.app/cart/id/${product._id}`,{
                 method:'DELETE',
                
             })
@@ -14,7 +14,7 @@ const CartProduct = ({product,setCartProducts,cartProducts}) => {
                 console.log(data)
                 const rem = cartProducts.filter((cartProduct) => cartProduct._id !== product._id)
                 setCartProducts(rem)
-                console.log(rem);
+                console.log();
                 swal("Hmm...!", "Product removed from cart!", "success");
             
             })
@@ -22,7 +22,7 @@ const CartProduct = ({product,setCartProducts,cartProducts}) => {
 
     return (
         <div className="flex  justify-between  my-3 shadow-md">
-            <div className="w-[20%]   my-auto">
+            <div className="w-[20%]   lg:my-auto">
                 <img src={image} className="h-[80%]" />
             </div>
            

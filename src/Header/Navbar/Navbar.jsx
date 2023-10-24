@@ -1,12 +1,14 @@
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import logo from '../../assets/download.jfif'
-import { useContext, useState } from "react";
-import { authContex } from "../../Components/AuthProvider/AuthProvider";
 
+import { authContex } from "../../Components/AuthProvider/AuthProvider";
+import '../../Components/CSS/dark.css'
+import { ThemeContext } from "../../Root/Root";
+import { useContext } from "react";
 
 const Navbar = () => {
-
-  const [isLight,setIsLight]=useState(true)
+  const {isLight,setIsLight}=useContext(ThemeContext)
+  
   const navigate = useNavigate()
     const {logOut,user,disName,photoLink}= useContext(authContex)
     
@@ -22,13 +24,13 @@ const Navbar = () => {
 }
 
     return (
-        <div className="navbar bg-base-100 shadow-lg ">
+        <div className={`navbar ${!isLight && 'darkcss'} bg-base-100 shadow-lg `}>
   <div className="navbar-start">
     <div className="dropdown">
       <label tabIndex={0} className="btn btn-ghost lg:hidden">
         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
       </label>
-      <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+      <ul tabIndex={0} className={`menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 ${!isLight && 'darkcss'}`}>
        <li><NavLink to='/'>Home</NavLink></li>
        <li><NavLink to='/addproduct'>Add product</NavLink></li>
        <li><NavLink to='sign-in'>Sign in</NavLink></li>

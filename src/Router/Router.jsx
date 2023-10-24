@@ -9,7 +9,8 @@ import AddProduct from "../Pages/AddProduct/AddProduct";
 import UpdateProduct from "../Pages/UpdateProduct/updateProduct";
 import ProductDetails from "../Pages/ProductDetails/ProductDetails";
 import MyCart from "../Pages/MyCart/MyCart";
-import TestCard from "../TestCard/TestCard";
+
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 
 
@@ -27,7 +28,7 @@ const Router = createBrowserRouter([
             {
                 path:'/products/:brandname',
                 element:<BrandProducts></BrandProducts>,
-                loader:({params})=>fetch(`http://localhost:5000/products/${params.brandname}`)
+                loader:({params})=>fetch(`https://brand-reseller-server.vercel.app/products/${params.brandname}`)
             },
             {
                 path:'/sign-in',
@@ -39,26 +40,22 @@ const Router = createBrowserRouter([
             },
             {
                 path:'/addproduct',
-                element:<AddProduct></AddProduct>
+                element:<PrivateRoute><AddProduct></AddProduct></PrivateRoute>
             },
             {
                 path:'/update/:id',
-                element:<UpdateProduct></UpdateProduct>,
-                loader:({params})=>fetch(`http://localhost:5000/products/id/${params.id}`)
+                element:<PrivateRoute><UpdateProduct></UpdateProduct></PrivateRoute>,
+                loader:({params})=>fetch(`https://brand-reseller-server.vercel.app/products/id/${params.id}`)
             },
             {
                 path:'/product/:id',
-                loader:({params})=>fetch(`http://localhost:5000/products/id/${params.id}`),
-                element:<ProductDetails></ProductDetails>
+                loader:({params})=>fetch(`https://brand-reseller-server.vercel.app/products/id/${params.id}`),
+                element:<PrivateRoute><ProductDetails></ProductDetails></PrivateRoute>
 
             },
             {
                 path:'/mycart',
-                element:<MyCart></MyCart>
-            },
-            {
-                path:'test',
-                element:<TestCard></TestCard>
+                element:<PrivateRoute><MyCart></MyCart></PrivateRoute>
             }
 
         ]    

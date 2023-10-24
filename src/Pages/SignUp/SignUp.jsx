@@ -36,7 +36,7 @@ const SignUp = () => {
            
            updateUser(name,link)
             .then(()=>{
-                fetch('http://localhost:5000/users',{
+                fetch('https://brand-reseller-server.vercel.app/users',{
                     method:'POST',
                     headers:{
                         'content-type':'application/json'

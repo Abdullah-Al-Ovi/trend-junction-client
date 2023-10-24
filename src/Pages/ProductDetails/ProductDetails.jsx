@@ -14,7 +14,7 @@ const ProductDetails = () => {
     cartInfo.user_email = user.email
 
     const handleAddToCart=(id)=>{
-        fetch('http://localhost:5000/cart',{
+        fetch('https://brand-reseller-server.vercel.app/cart',{
             method:'POST',
             headers:{
                 'content-type':'application/json'
@@ -32,7 +32,7 @@ const ProductDetails = () => {
 
 <div className=" overflow-hidden w-[80%] mx-auto bg-white rounded-lg shadow-lg dark:bg-gray-800">
 <div className="px-4 py-2 text-center">
-    <h1 className="text-lg lg:text-2xl font-semibold text-gray-800 uppercase dark:text-white">NIKE AIR</h1>
+    <h1 className="text-lg lg:text-2xl font-semibold text-gray-800 uppercase dark:text-white">{loadedData.name}</h1>
     
 </div>
 
