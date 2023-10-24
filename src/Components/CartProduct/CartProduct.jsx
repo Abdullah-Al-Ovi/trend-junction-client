@@ -23,7 +23,7 @@ const CartProduct = ({product,setCartProducts,cartProducts}) => {
     return (
         <div className="flex  justify-between  my-3 shadow-md">
             <div className="w-[20%]   lg:my-auto">
-                <img src={image} className="h-[80%]" />
+                <img src={image} className="lg:h-[80%]" />
             </div>
            
            <div>
